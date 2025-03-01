@@ -1,0 +1,257 @@
+[
+  {
+    "id": 1,
+    "name": "Spiderman",
+    "image": "assets/images/spiderman.jpg",
+    "description": "Peter Parker, un estudiante de secundaria que adquirió habilidades arácnidas después de ser mordido por una araña radiactiva. Con gran poder viene gran responsabilidad.",
+    "team": "Marvel",
+    "powers": [
+      "Fuerza sobrehumana",
+      "Agilidad",
+      "Sentido arácnido",
+      "Trepar paredes",
+      "Lanzar telarañas"
+    ],
+    "firstAppearance": 1962,
+    "realName": "Peter Parker",
+    "rating": 8
+  },
+  {
+    "id": 2,
+    "name": "Iron Man",
+    "image": "assets/images/ironman.jpg",
+    "description": "Tony Stark, un genio multimillonario, inventor y filántropo que construyó una armadura tecnológica para salvar su vida y ahora la usa para proteger al mundo como Iron Man.",
+    "team": "Marvel",
+    "powers": [
+      "Armadura tecnológica",
+      "Vuelo",
+      "Super fuerza",
+      "Rayos repulsores",
+      "Inteligencia superior"
+    ],
+    "firstAppearance": 1963,
+    "realName": "Tony Stark",
+    "rating": 9
+  },
+  {
+    "id": 3,
+    "name": "Batman",
+    "image": "assets/images/batman.jpg",
+    "description": "Bruce Wayne, un empresario multimillonario que presenció el asesinato de sus padres cuando era niño. Juró venganza contra los criminales, un juramento moderado por el sentido de la justicia.",
+    "team": "DC",
+    "powers": [
+      "Intelecto genio",
+      "Maestro detective",
+      "Artes marciales",
+      "Gadgets tecnológicos",
+      "Intimidación"
+    ],
+    "firstAppearance": 1939,
+    "realName": "Bruce Wayne",
+    "rating": 7
+  },
+  {
+    "id": 4,
+    "name": "Wonder Woman",
+    "image": "assets/images/wonderwoman.jpg",
+    "description": "Diana Prince, princesa amazona de Themyscira dotada de poderes sobrehumanos y artefactos mágicos, incluidos los brazaletes de sumisión y el lazo de la verdad.",
+    "team": "DC",
+    "powers": [
+      "Fuerza sobrehumana",
+      "Vuelo",
+      "Brazaletes indestructibles",
+      "Lazo de la verdad",
+      "Longevidad"
+    ],
+    "firstAppearance": 1941,
+    "realName": "Diana Prince",
+    "rating": 9
+  },
+  {
+    "id": 5,
+    "name": "Captain America",
+    "image": "assets/images/captainamerica.jpg",
+    "description": "Steve Rogers, un joven frágil mejorado a la cima de la perfección humana por un suero experimental para ayudar a los esfuerzos de los Estados Unidos en la Segunda Guerra Mundial.",
+    "team": "Marvel",
+    "powers": [
+      "Fuerza mejorada",
+      "Agilidad",
+      "Resistencia",
+      "Curación acelerada",
+      "Maestro táctico"
+    ],
+    "firstAppearance": 1941,
+    "realName": "Steve Rogers",
+    "rating": 7
+  },
+  {
+    "id": 6,
+    "name": "Superman",
+    "image": "assets/images/superman.jpg",
+    "description": "Clark Kent, un extraterrestre del planeta Krypton criado en la Tierra como el superhéroe estadounidense. Posee poderes extraordinarios, incluyendo fuerza sobrehumana, velocidad, resistencia y vuelo.",
+    "team": "DC",
+    "powers": [
+      "Vuelo",
+      "Super fuerza",
+      "Invulnerabilidad",
+      "Visión de rayos X",
+      "Visión de calor"
+    ],
+    "firstAppearance": 1938,
+    "realName": "Clark Kent (Kal-El)",
+    "rating": 10
+  },
+  {
+    "id": 7,
+    "name": "Black Widow",
+    "image": "assets/images/blackwidow.jpg",
+    "description": "Natasha Romanoff, una ex espía rusa y miembro de los Vengadores. Maestra en artes marciales, espionaje y equipada con su característico arsenal de armas, incluyendo sus Mordeduras de Viuda.",
+    "team": "Marvel",
+    "powers": [
+      "Espionaje",
+      "Artes marciales",
+      "Experta en armas",
+      "Agilidad mejorada",
+      "Manipulación"
+    ],
+    "firstAppearance": 1964,
+    "realName": "Natasha Romanoff",
+    "rating": 6
+  },
+  {
+    "id": 8,
+    "name": "The Flash",
+    "image": "assets/images/flash.jpg",
+    "description": "Barry Allen, un científico forense que adquirió supervelocidad después de ser alcanzado por un rayo y bañado en productos químicos. Puede moverse, pensar y reaccionar a velocidades sobrehumanas.",
+    "team": "DC",
+    "powers": [
+      "Super velocidad",
+      "Viaje en el tiempo",
+      "Curación acelerada",
+      "Intangibilidad",
+      "Reflejos sobrehumanos"
+    ],
+    "firstAppearance": 1956,
+    "realName": "Barry Allen",
+    "rating": 8
+  },
+  {
+    "id": 9,
+    "name": "Thor",
+    "image": "assets/images/thor.jpg",
+    "description": "Thor Odinson, el dios del trueno asgardiano y miembro fundador de los Vengadores. Empuña el martillo encantado Mjolnir, que le otorga la capacidad de volar y manipular el clima.",
+    "team": "Marvel",
+    "powers": [
+      "Control del trueno",
+      "Fuerza sobrehumana",
+      "Longevidad",
+      "Vuelo",
+      "Invocación de Mjolnir"
+    ],
+    "firstAppearance": 1962,
+    "realName": "Thor Odinson",
+    "rating": 9
+  },
+  {
+    "id": 10,
+    "name": "Wolverine",
+    "image": "assets/images/wolverine.jpg",
+    "description": "Logan, un mutante con poderes regenerativos y garras retráctiles de adamantium. Su pasado misterioso y personalidad feroz lo convierten en uno de los X-Men más emblemáticos y temidos.",
+    "team": "Marvel",
+    "powers": [
+      "Factor de curación",
+      "Garras de adamantium",
+      "Sentidos mejorados",
+      "Longevidad",
+      "Fuerza sobrehumana"
+    ],
+    "firstAppearance": 1974,
+    "realName": "James Howlett (Logan)",
+    "rating": 8
+  },
+  {
+    "id": 11,
+    "name": "Black Panther",
+    "image": "assets/images/blackpanther.jpg",
+    "description": "T'Challa, rey de la nación africana ficticia de Wakanda, que obtuvo fuerza sobrehumana al ingerir una hierba en forma de corazón afectada por el metal vibranium, exclusivo de su país.",
+    "team": "Marvel",
+    "powers": [
+      "Fuerza mejorada",
+      "Agilidad",
+      "Sentidos agudizados",
+      "Traje de vibranium",
+      "Genio táctico"
+    ],
+    "firstAppearance": 1966,
+    "realName": "T'Challa",
+    "rating": 7
+  },
+  {
+    "id": 12,
+    "name": "Aquaman",
+    "image": "assets/images/aquaman.jpg",
+    "description": "Arthur Curry, mitad humano y mitad atlante, rey de la Atlántida y fundador de la Liga de la Justicia. Posee habilidades sobrehumanas, incluyendo respirar bajo el agua y comunicarse con la vida marina.",
+    "team": "DC",
+    "powers": [
+      "Respiración acuática",
+      "Comunicación con vida marina",
+      "Fuerza sobrehumana",
+      "Resistencia",
+      "Control del agua"
+    ],
+    "firstAppearance": 1941,
+    "realName": "Arthur Curry",
+    "rating": 7
+  },
+  {
+    "id": 13,
+    "name": "Doctor Strange",
+    "image": "assets/images/drstrange.jpg",
+    "description": "Stephen Strange, un neurocirujano que, tras un accidente automovilístico que terminó con su carrera, descubrió el mundo de la magia y las dimensiones alternativas, convirtiéndose en el Hechicero Supremo.",
+    "team": "Marvel",
+    "powers": [
+      "Magia",
+      "Proyección astral",
+      "Manipulación del tiempo",
+      "Teletransportación",
+      "Ilusiones"
+    ],
+    "firstAppearance": 1963,
+    "realName": "Stephen Strange",
+    "rating": 9
+  },
+  {
+    "id": 14,
+    "name": "Cyborg",
+    "image": "assets/images/cyborg.jpg",
+    "description": "Victor Stone, un ex atleta universitario que, después de un accidente casi fatal, fue reconstruido con tecnología experimental, otorgándole fuerza sobrehumana, resistencia y capacidades tecnológicas avanzadas.",
+    "team": "DC",
+    "powers": [
+      "Interfaz tecnológica",
+      "Cañón sónico",
+      "Super fuerza",
+      "Vuelo",
+      "Hackeo avanzado"
+    ],
+    "firstAppearance": 1980,
+    "realName": "Victor Stone",
+    "rating": 7
+  },
+  {
+    "id": 15,
+    "name": "Scarlet Witch",
+    "image": "assets/images/scarletwitch.jpg",
+    "description": "Wanda Maximoff, una poderosa hechicera con la capacidad de alterar la realidad y realizar proyecciones telepáticas. Sus poderes la convierten en una de las seres más poderosos del universo Marvel.",
+    "team": "Marvel",
+    "powers": [
+      "Manipulación de la realidad",
+      "Telekinesis",
+      "Proyección de energía",
+      "Alteración de probabilidades",
+      "Hechicería"
+    ],
+    "firstAppearance": 1964,
+    "realName": "Wanda Maximoff",
+    "rating": 10
+  }
+]
