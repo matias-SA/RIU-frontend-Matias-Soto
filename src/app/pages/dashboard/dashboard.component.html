@@ -1,9 +1,33 @@
-<h1>Heoes</h1>
-<div class="container">
-    <!-- @for (hero of heroes; track hero.id) {
-        <div class="hero">
-            <img [src]="hero.image" [alt]="hero.name">
-            <h2>{{ hero.name }}</h2>
+<div class="dashboard-container">
+    <h1>Superhéroes</h1>
+    <div class="search-container">
+    <form [formGroup]="form">
+        <app-text-input
+            formControlName="name"
+            label="Buscar superhéroe..."
+            placeholder="Buscar superhéroe..."
+        />
+    </form>
+    <button mat-fab color="primary" (click)="onAdd()" class="add-button">
+        <mat-icon>add</mat-icon>
+    </button>
+    </div>
+
+    <div class="heroes-grid">
+        @for (hero of heroes(); track hero.id) {
+            <app-card-hero
+            [hero]="hero"
+            (edit)="onEdit($event)"
+            (delete)="onDelete($event)"
+            (view)="onView($event)"
+            />
+        }
+    </div>
+
+    @if (heroes().length === 0) {
+        <div class="no-results">
+            <p>No se encontraron superhéroes</p>
         </div>
-    } -->
+    }
+  <app-paginator (pageChange)="onPageChange($event)" [totalHeroes]="totalHeroes()" [pageSize]="pageSize()" [currentPage]="currentPage()" />
 </div>

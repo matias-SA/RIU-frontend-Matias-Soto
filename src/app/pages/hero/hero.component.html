@@ -1,0 +1,70 @@
+<div class="hero-container">
+  <div class="hero-content">
+    <div class="action-buttons">
+      <button mat-icon-button color="primary" matTooltip="Volver" routerLink="/dashboard">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    </div>
+
+    <mat-card class="hero-card">
+      <div class="hero-header">
+        <div class="hero-image-container">
+          <img [src]="hero()?.image" [alt]="hero()?.name" class="hero-image">
+          <div class="hero-team-badge" [ngClass]="{'marvel': hero()?.team === 'Marvel', 'dc': hero()?.team === 'DC'}">
+            {{ hero()?.team }}
+          </div>
+        </div>
+        <div class="hero-title">
+          <mat-card-title class="hero-name">{{ hero()?.name }}</mat-card-title>
+          <mat-card-subtitle class="hero-real-name">{{ hero()?.realName }}</mat-card-subtitle>
+          <app-raiting [rating]="hero()?.rating"></app-raiting>
+        </div>
+      </div>
+
+      <mat-card-content>
+        <mat-divider></mat-divider>
+        
+        <div class="hero-section">
+          <h3 class="section-title">Descripción</h3>
+          <p class="hero-description">{{ hero()?.description }}</p>
+        </div>
+        
+        <mat-divider></mat-divider>
+        
+        <div class="hero-section">
+          <h3 class="section-title">Poderes</h3>
+          <div class="hero-powers">
+            <mat-chip-set>
+              @for(power of hero()?.powers; track $index) {
+                <mat-chip highlighted color="accent">
+                    {{ power }}
+                </mat-chip>
+              }
+            </mat-chip-set>
+          </div>
+        </div>
+        
+        <mat-divider></mat-divider>
+        
+        <!-- Información adicional -->
+        <div class="hero-section">
+          <h3 class="section-title">Información adicional</h3>
+          <div class="hero-info-grid">
+            <div class="info-item">
+              <mat-icon color="primary">calendar_today</mat-icon>
+              <span class="info-label">Primera aparición:</span>
+              <span class="info-value">{{ hero()?.firstAppearance }}</span>
+            </div>
+            <div class="info-item">
+              <mat-icon color="primary">groups</mat-icon>
+              <span class="info-label">Equipo:</span>
+              <span class="info-value" [ngClass]="{'marvel-text': hero()?.team === 'Marvel', 'dc-text': hero()?.team === 'DC'}">
+                {{ hero()?.team }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

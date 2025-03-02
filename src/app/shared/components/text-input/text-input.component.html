@@ -1,0 +1,25 @@
+<mat-form-field appearance="outline">
+  <mat-label>{{ label() }}</mat-label>
+
+  @if(prefixIcon()) {
+    <mat-icon matPrefix>{{ prefixIcon() }}</mat-icon>
+  }
+
+  <input
+    matInput
+    #inputRef
+    type="text"
+    [placeholder]="placeholder()"
+    [formControl]="control()"
+  />
+
+  <mat-error>
+    @if(control().errors?.['required']) {
+      Campo requerido
+    }
+    @if(control().errors?.['email']) {
+      Correo electrónico inválido
+    }
+  </mat-error>
+  
+</mat-form-field>

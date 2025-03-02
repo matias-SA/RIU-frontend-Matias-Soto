@@ -1,0 +1,45 @@
+.hero-card {
+  max-width: 100%;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  img[mat-card-image] {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  mat-card-header {
+    padding: 16px 16px 0;
+
+    mat-card-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    mat-card-subtitle {
+      color: #666;
+      font-weight: 400;
+    }
+  }
+  mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px 16px;
+
+    button {
+      flex: 1;
+      margin: 0 4px;
+
+      mat-icon {
+        margin-right: 4px;
+      }
+    }
+  }
+}

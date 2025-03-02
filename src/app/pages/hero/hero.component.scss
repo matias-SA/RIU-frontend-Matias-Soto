@@ -1,0 +1,146 @@
+.hero-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.hero-content {
+  .action-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .hero-card {
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+    .hero-header {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+
+      .hero-image-container {
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+          margin: 0;
+        }
+
+        .hero-image {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 4px;
+        }
+
+        .hero-team-badge {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          padding: 5px 10px;
+          border-radius: 4px;
+          font-weight: bold;
+          color: white;
+
+          &.marvel {
+            background-color: #e23636; // Rojo Marvel
+          }
+
+          &.dc {
+            background-color: #0476f2; // Azul DC
+          }
+        }
+      }
+
+      .hero-title {
+        padding: 1.5rem;
+        flex: 1;
+
+        .hero-name {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .hero-real-name {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    mat-card-content {
+      padding: 0 1.5rem 1.5rem;
+
+      .hero-section {
+        padding: 1.5rem 0;
+
+        .section-title {
+          font-size: 1.3rem;
+          color: #333;
+          margin-bottom: 1rem;
+          font-weight: 500;
+        }
+
+        .hero-description {
+          line-height: 1.6;
+          color: #555;
+          text-align: justify;
+        }
+
+        .hero-powers {
+          margin-top: 0.5rem;
+
+          mat-chip-set {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+          }
+        }
+
+        .hero-info-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1rem;
+
+          @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+          }
+
+          .info-item {
+            display: flex;
+            align-items: center;
+
+            mat-icon {
+              margin-right: 0.5rem;
+            }
+
+            .info-label {
+              font-weight: 500;
+              margin-right: 0.5rem;
+              color: #555;
+            }
+
+            .info-value {
+              font-weight: bold;
+
+              &.marvel-text {
+                color: #e23636;
+              }
+
+              &.dc-text {
+                color: #0476f2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

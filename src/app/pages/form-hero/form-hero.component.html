@@ -1,0 +1,11 @@
+<h1>Formulario de héroe</h1>
+<form [formGroup]="formHero">
+  <app-text-input label="Nombre" placeholder="Nombre" formControlName="name"/>
+  <app-text-input label="Imagen" placeholder="Imagen" formControlName="image"/>
+  <app-text-input label="Descripción" placeholder="Descripción" formControlName="description"/>
+  <app-text-input label="Equipo" placeholder="Equipo" formControlName="team"/>
+  <app-text-input label="Poderes" placeholder="Poderes" formControlName="powers"/>
+  <app-text-input label="Primera aparición" placeholder="Primera aparición" formControlName="firstAppearance"/>
+  <app-text-input label="Nombre real" placeholder="Nombre real" formControlName="realName"/>
+  <button [disabled]="formHero.invalid" mat-raised-button color="primary" (click)="onSubmit()">Guardar</button>
+</form>
