@@ -1,4 +1,4 @@
-import { Injectable, signal } from "@angular/core";
+import { inject, Injectable, signal } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, of, forkJoin } from "rxjs";
 import { Hero } from "../interfaces/hero.interface";
@@ -26,15 +26,13 @@ export interface HeroCreate {
 export class HeroesService {
   public heroes = signal<Hero[]>(data);
   private lastId = signal<number>(0);
-
-  constructor(private http: HttpClient) {}
+  private http = inject(HttpClient);
 
   private initializeCache(): Observable<Hero[]> {
     const heroesHttp = this.http.get<Hero[]>("assets/data/data.json").pipe(
       tap((heroes) => {
         this.updateLastId(heroes);
       })
-      //   map(() => this.getFilteredHeroes())
     );
     const heroesSignal = of(this.heroes());
 
@@ -51,12 +49,6 @@ export class HeroesService {
       this.lastId.set(maxId);
     }
   }
-
-  //   private getFilteredHeroes(): Hero[] {
-  //     return this.heroesCache().filter(
-  //       (hero) => !this.deletedHeroIds().includes(hero.id)
-  //     );
-  //   }
 
   public getHeroes(
     page: number = 1,
@@ -85,7 +77,7 @@ export class HeroesService {
   }
 
   public createHero(heroData: HeroCreate): Observable<Hero> {
-    const newId = this.lastId() + 1;
+    const newId = Date.now();
 
     const newHero: Hero = {
       id: newId,
@@ -178,7 +170,7 @@ export class HeroesService {
       heroes: paginatedHeroes,
       total,
       currentPage: validPage,
-      totalPages: totalPages || 1,
+      totalPages: Math.max(1, totalPages),
     };
   }
 }

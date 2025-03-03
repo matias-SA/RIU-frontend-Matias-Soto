@@ -17,6 +17,11 @@ import { MatPaginatorModule, PageEvent } from "@angular/material/paginator";
   `,
   styles: [
     `
+      .paginator {
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
       .loading-overlay {
         position: fixed;
         top: 0;
@@ -49,7 +54,6 @@ import { MatPaginatorModule, PageEvent } from "@angular/material/paginator";
   ],
 })
 export class PaginatorComponent {
-  constructor() {}
   public pageChange = output<PageEvent>();
   public totalHeroes = input<number>(0);
   public pageSize = input<number>(5);

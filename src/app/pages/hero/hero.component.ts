@@ -8,7 +8,6 @@ import { MatChipsModule } from "@angular/material/chips";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatTooltipModule } from "@angular/material/tooltip";
-import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 import { HeroesService } from "../../core/services/heroes.service";
 import { Hero } from "../../core/interfaces/hero.interface";
@@ -29,7 +28,6 @@ import RaitingComponent from "./raiting/raiting.component";
     MatDividerModule,
     MatProgressSpinnerModule,
     MatTooltipModule,
-    MatSnackBarModule,
     RaitingComponent,
   ],
   templateUrl: "./hero.component.html",

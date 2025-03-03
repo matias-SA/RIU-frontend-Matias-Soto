@@ -1,16 +1,17 @@
 <div class="dashboard-container">
     <h1>Superhéroes</h1>
     <div class="search-container">
-    <form [formGroup]="form">
-        <app-text-input
-            formControlName="name"
-            label="Buscar superhéroe..."
-            placeholder="Buscar superhéroe..."
-        />
-    </form>
-    <button mat-fab color="primary" (click)="onAdd()" class="add-button">
-        <mat-icon>add</mat-icon>
-    </button>
+        <form style="width: 100%;" [formGroup]="form">
+            <app-text-input
+                formControlName="name"
+                label="Buscar superhéroe..."
+                placeholder="Buscar superhéroe..."
+            />
+        </form>
+        <button style="background-color: #007bff !important;
+    color: white !important;" matTooltip="Agregar superhéroe" mat-fab color="primary" (click)="onAdd()" class="add-button">
+            <mat-icon>add</mat-icon>
+        </button>
     </div>
 
     <div class="heroes-grid">

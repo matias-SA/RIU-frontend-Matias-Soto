@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Spiderman",
-    "image": "assets/images/spiderman.jpg",
+    "image": "http://shutterstock.com/image-vector/spiderman-art-design-icon-vector-600w-2404385831.jpg",
     "description": "Peter Parker, un estudiante de secundaria que adquirió habilidades arácnidas después de ser mordido por una araña radiactiva. Con gran poder viene gran responsabilidad.",
     "team": "Marvel",
     "powers": [
@@ -19,7 +19,7 @@
   {
     "id": 2,
     "name": "Iron Man",
-    "image": "assets/images/iron-man.jpg",
+    "image": "https://www.latercera.com/resizer/EDfVkoDX1lAvafHdtAqf_025os4=/300x0/arc-anglerfish-arc2-prod-copesa/public/MZGGX7HRMJFGRDR4TQ2JIIFVSY.jpg",
     "description": "Tony Stark, un genio multimillonario, inventor y filántropo que construyó una armadura tecnológica para salvar su vida y ahora la usa para proteger al mundo como Iron Man.",
     "team": "Marvel",
     "powers": [
@@ -36,7 +36,7 @@
   {
     "id": 3,
     "name": "Batman",
-    "image": "assets/images/batman.jpg",
+    "image": "https://i.pinimg.com/474x/4d/aa/2a/4daa2a0fa4c862075a6edb736eaca9f5.jpg",
     "description": "Bruce Wayne, un empresario multimillonario que presenció el asesinato de sus padres cuando era niño. Juró venganza contra los criminales, un juramento moderado por el sentido de la justicia.",
     "team": "DC",
     "powers": [
@@ -53,7 +53,7 @@
   {
     "id": 4,
     "name": "Wonder Woman",
-    "image": "assets/images/wonder-woman.jpg",
+    "image": "https://i.pinimg.com/564x/b4/2f/a0/b42fa0d8a2cd2d9adf4c6b892985dcb3.jpg",
     "description": "Diana Prince, princesa amazona de Themyscira dotada de poderes sobrehumanos y artefactos mágicos, incluidos los brazaletes de sumisión y el lazo de la verdad.",
     "team": "DC",
     "powers": [
@@ -70,7 +70,7 @@
   {
     "id": 5,
     "name": "Captain America",
-    "image": "assets/images/captain-america.jpg",
+    "image": "https://i.pinimg.com/736x/22/03/bb/2203bbb5f38d153080407c18a1ecd206.jpg",
     "description": "Steve Rogers, un joven frágil mejorado a la cima de la perfección humana por un suero experimental para ayudar a los esfuerzos de los Estados Unidos en la Segunda Guerra Mundial.",
     "team": "Marvel",
     "powers": [
@@ -87,7 +87,7 @@
   {
     "id": 6,
     "name": "Superman",
-    "image": "assets/images/superman.jpg",
+    "image": "https://www.muralesyvinilos.com/murales/510000883_dibujo_de_superman_volando.jpg",
     "description": "Clark Kent, un extraterrestre del planeta Krypton criado en la Tierra como el superhéroe estadounidense. Posee poderes extraordinarios, incluyendo fuerza sobrehumana, velocidad, resistencia y vuelo.",
     "team": "DC",
     "powers": [
@@ -104,7 +104,7 @@
   {
     "id": 7,
     "name": "Black Widow",
-    "image": "assets/images/black-widow.jpg",
+    "image": "https://lascronicasdeaxa.wordpress.com/wp-content/uploads/2020/10/black-widow_2020_comic-movie_00.jpg",
     "description": "Natasha Romanoff, una ex espía rusa y miembro de los Vengadores. Maestra en artes marciales, espionaje y equipada con su característico arsenal de armas, incluyendo sus Mordeduras de Viuda.",
     "team": "Marvel",
     "powers": [
@@ -121,7 +121,7 @@
   {
     "id": 8,
     "name": "The Flash",
-    "image": "assets/images/flash.jpg",
+    "image": "https://i.pinimg.com/originals/48/04/9a/48049ae323958ddc5ebaee14d598801d.jpg",
     "description": "Barry Allen, un científico forense que adquirió supervelocidad después de ser alcanzado por un rayo y bañado en productos químicos. Puede moverse, pensar y reaccionar a velocidades sobrehumanas.",
     "team": "DC",
     "powers": [
@@ -138,7 +138,7 @@
   {
     "id": 9,
     "name": "Thor",
-    "image": "assets/images/thor.jpg",
+    "image": "https://i.pinimg.com/736x/cd/f9/93/cdf993708bb7f8815066ee7c908b5d4a.jpg",
     "description": "Thor Odinson, el dios del trueno asgardiano y miembro fundador de los Vengadores. Empuña el martillo encantado Mjolnir, que le otorga la capacidad de volar y manipular el clima.",
     "team": "Marvel",
     "powers": [
@@ -155,7 +155,7 @@
   {
     "id": 10,
     "name": "Wolverine",
-    "image": "assets/images/wolverine.jpg",
+    "image": "https://i.pinimg.com/736x/7f/08/99/7f089977d49df8a9e9e9ef835578adcd.jpg",
     "description": "Logan, un mutante con poderes regenerativos y garras retráctiles de adamantium. Su pasado misterioso y personalidad feroz lo convierten en uno de los X-Men más emblemáticos y temidos.",
     "team": "Marvel",
     "powers": [
@@ -172,7 +172,7 @@
   {
     "id": 11,
     "name": "Black Panther",
-    "image": "assets/images/black-panther.jpg",
+    "image": "https://i.pinimg.com/736x/12/23/f2/1223f284f79c6aefe62c1dbef42d873d.jpg",
     "description": "T'Challa, rey de la nación africana ficticia de Wakanda, que obtuvo fuerza sobrehumana al ingerir una hierba en forma de corazón afectada por el metal vibranium, exclusivo de su país.",
     "team": "Marvel",
     "powers": [
@@ -189,7 +189,7 @@
   {
     "id": 12,
     "name": "Aquaman",
-    "image": "assets/images/aquaman.jpg",
+    "image": "https://i.pinimg.com/736x/e9/5b/03/e95b03a1db2b9ad56d2529a412b1e065.jpg",
     "description": "Arthur Curry, mitad humano y mitad atlante, rey de la Atlántida y fundador de la Liga de la Justicia. Posee habilidades sobrehumanas, incluyendo respirar bajo el agua y comunicarse con la vida marina.",
     "team": "DC",
     "powers": [
@@ -206,7 +206,7 @@
   {
     "id": 13,
     "name": "Doctor Strange",
-    "image": "assets/images/doctor-strange.jpg",
+    "image": "https://i.pinimg.com/736x/d7/45/a3/d745a3d95eb81930a2c5c00f4bd6a4bd.jpg",
     "description": "Stephen Strange, un neurocirujano que, tras un accidente automovilístico que terminó con su carrera, descubrió el mundo de la magia y las dimensiones alternativas, convirtiéndose en el Hechicero Supremo.",
     "team": "Marvel",
     "powers": [
@@ -223,7 +223,7 @@
   {
     "id": 14,
     "name": "Cyborg",
-    "image": "assets/images/cyborg.jpg",
+    "image": "https://i.pinimg.com/736x/0a/31/09/0a31098f3d40b54d1353fc799688896e.jpg",
     "description": "Victor Stone, un ex atleta universitario que, después de un accidente casi fatal, fue reconstruido con tecnología experimental, otorgándole fuerza sobrehumana, resistencia y capacidades tecnológicas avanzadas.",
     "team": "DC",
     "powers": [
@@ -240,7 +240,7 @@
   {
     "id": 15,
     "name": "Scarlet Witch",
-    "image": "assets/images/scarlet-witch.jpg",
+    "image": "https://i.pinimg.com/736x/27/f8/3b/27f83b85aabf369bce4196e8dfa80881.jpg",
     "description": "Wanda Maximoff, una poderosa hechicera con la capacidad de alterar la realidad y realizar proyecciones telepáticas. Sus poderes la convierten en una de las seres más poderosos del universo Marvel.",
     "team": "Marvel",
     "powers": [

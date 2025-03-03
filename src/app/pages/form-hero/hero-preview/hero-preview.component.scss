@@ -1,0 +1,82 @@
+.preview-section {
+  margin: 2rem 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+
+  .preview-card {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    .preview-image {
+      position: relative;
+      width: 100%;
+      max-width: 250px;
+      margin: 0 auto 1rem;
+
+      @media (min-width: 768px) {
+        margin: 0;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+        aspect-ratio: 2/3;
+      }
+
+      .preview-team {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-weight: bold;
+        color: white;
+        font-size: 0.9rem;
+
+        &.marvel {
+          background-color: #e23636;
+        }
+
+        &.dc {
+          background-color: #0476f2;
+        }
+
+        &.default {
+          background-color: #00c003;
+        }
+      }
+    }
+
+    .preview-details {
+      flex: 1;
+
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+
+      .preview-real-name {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 1rem;
+        font-style: italic;
+      }
+
+      .preview-description {
+        line-height: 1.6;
+        color: #555;
+      }
+    }
+  }
+}

@@ -8,9 +8,10 @@
   <input
     matInput
     #inputRef
-    type="text"
+    [type]="type()"
     [placeholder]="placeholder()"
     [formControl]="control()"
+    [appUppercase]="uppercase()"
   />
 
   <mat-error>
@@ -19,6 +20,9 @@
     }
     @if(control().errors?.['email']) {
       Correo electrónico inválido
+    }
+    @if(control().errors?.['pattern']) {
+      Formato inválido, debe ser una URL válida
     }
   </mat-error>
   

@@ -20,6 +20,7 @@ import {
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
+import { UppercaseDirective } from "../../directives/uppercase.directive";
 
 @Component({
   selector: "app-text-input",
@@ -32,6 +33,7 @@ import { MatInputModule } from "@angular/material/input";
     ReactiveFormsModule,
     FormsModule,
     MatIconModule,
+    UppercaseDirective,
   ],
   providers: [
     {
@@ -47,7 +49,7 @@ export class TextInputComponent implements ControlValueAccessor, AfterViewInit {
   formControlDirective!: FormControlDirective;
 
   @ViewChild("inputRef", { static: false })
-  inputRef!: ElementRef<HTMLInputElement>;
+  inputRef!: ElementRef<HTMLInputElement | HTMLTextAreaElement>;
 
   formControl = input<FormControl | null>(null);
 
@@ -60,6 +62,10 @@ export class TextInputComponent implements ControlValueAccessor, AfterViewInit {
   prefixIcon = input<string | undefined>(undefined);
 
   autofocus = input<boolean>(false);
+
+  type = input<string>("text");
+
+  uppercase = input<boolean>(false);
 
   readonly control = computed(() => {
     return (this.formControl() ||

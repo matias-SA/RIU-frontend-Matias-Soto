@@ -1,11 +1,84 @@
-<h1>Formulario de héroe</h1>
-<form [formGroup]="formHero">
-  <app-text-input label="Nombre" placeholder="Nombre" formControlName="name"/>
-  <app-text-input label="Imagen" placeholder="Imagen" formControlName="image"/>
-  <app-text-input label="Descripción" placeholder="Descripción" formControlName="description"/>
-  <app-text-input label="Equipo" placeholder="Equipo" formControlName="team"/>
-  <app-text-input label="Poderes" placeholder="Poderes" formControlName="powers"/>
-  <app-text-input label="Primera aparición" placeholder="Primera aparición" formControlName="firstAppearance"/>
-  <app-text-input label="Nombre real" placeholder="Nombre real" formControlName="realName"/>
-  <button [disabled]="formHero.invalid" mat-raised-button color="primary" (click)="onSubmit()">Guardar</button>
-</form>
+<div class="form-container">
+  <div class="form-header">
+    <button mat-icon-button color="primary" matTooltip="Volver" routerLink="/dashboard">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h1>Crear Nuevo Superhéroe</h1>
+  </div>
+
+  <mat-card class="form-card">
+    <mat-card-content>
+      <form [formGroup]="formHero" (ngSubmit)="onSubmit()">
+        <div class="form-grid">
+          <div class="form-section">
+            <h2>Información Básica</h2>
+            
+            <app-text-input 
+              label="Nombre del Superhéroe" 
+              placeholder="Ej: Spider-Man" 
+              formControlName="name"
+              [uppercase]="true"
+            />
+            
+            <app-text-input 
+              label="Nombre Real" 
+              placeholder="Ej: Peter Parker" 
+              formControlName="realName"
+            />
+            
+            <app-text-input 
+              label="Equipo" 
+              placeholder="Marvel o DC" 
+              formControlName="team"
+            />
+          </div>
+          
+          <div class="form-section">
+            <h2 class="section-title">Detalles</h2>
+            
+            <app-text-input 
+              label="URL de la Imagen" 
+              placeholder="Enlace a la imagen del superhéroe" 
+              formControlName="image"
+            />
+            
+            <app-text-input 
+              label="Primera Aparición" 
+              placeholder="Año (Ej: 1962)" 
+              formControlName="firstAppearance"
+              [type]="'number'"
+            />
+            
+            <app-text-input 
+              label="Poderes" 
+              placeholder="Ej: Fuerza, Velocidad, Vuelo (separados por comas)" 
+              formControlName="powers"
+            />
+          </div>
+        </div>
+        
+        <div class="form-section">
+          <h2>Descripción</h2>
+          <app-text-input 
+            label="Descripción del Superhéroe" 
+            placeholder="Breve historia y características del personaje" 
+            formControlName="description"
+          />
+        </div>
+        
+        @if (formHero.valid) {
+          <app-hero-preview [hero]="formHero.value"/>
+        }
+        
+        <div class="form-actions">
+          <button type="button" mat-stroked-button color="primary" routerLink="/dashboard">
+            Cancelar
+          </button>
+          <button type="submit" mat-raised-button color="primary" [disabled]="formHero.invalid">
+            <mat-icon>save</mat-icon> {{this.isEditMode() ? "Actualizar" : "Guardar"}} Superhéroe
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

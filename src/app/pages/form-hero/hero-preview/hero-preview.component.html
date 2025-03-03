@@ -1,0 +1,17 @@
+<div class="preview-section">
+  <h2>Vista Previa</h2>
+  <div class="preview-card">
+    <div class="preview-image">
+      <img [src]="hero()?.image" alt="Vista previa" 
+           onerror="this.src='assets/images/placeholder.jpg'; this.onerror=null;">
+      <div class="preview-team" [ngClass]="{'marvel': isMarvelTeam(), 'dc': isDCTeam(), 'default': !isMarvelTeam() && !isDCTeam()}">
+        {{ hero()?.team }}
+      </div>
+    </div>
+    <div class="preview-details">
+      <h3>{{ hero()?.name || 'Nombre del Superhéroe' }}</h3>
+      <p class="preview-real-name">{{ hero()?.realName || 'Nombre Real' }}</p>
+      <p class="preview-description">{{ hero()?.description || 'Descripción del superhéroe' }}</p>
+    </div>
+  </div>
+</div>

@@ -14,6 +14,9 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatPaginatorModule, PageEvent } from "@angular/material/paginator";
 import { PaginatorComponent } from "../../shared/components/paginator/paginator.component";
 import { Router } from "@angular/router";
+import { ConfirmationService } from "../../core/services/confirmation.service";
+import { SnackbarService } from "../../core/services/snackbar.service";
+import { MatTooltipModule } from "@angular/material/tooltip";
 @Component({
   selector: "app-dashboard",
   standalone: true,
@@ -25,12 +28,17 @@ import { Router } from "@angular/router";
     MatPaginatorModule,
     TextInputComponent,
     PaginatorComponent,
+    MatTooltipModule,
   ],
   templateUrl: "./dashboard.component.html",
   styleUrl: "./dashboard.component.scss",
 })
 export default class DashboardComponent implements OnInit {
   heroesService = inject(HeroesService);
+  router = inject(Router);
+  formBuilder = inject(FormBuilder);
+  confirmationService = inject(ConfirmationService);
+  snackbarService = inject(SnackbarService);
 
   form!: FormGroup;
   public heroes = signal<Hero[]>([]);
@@ -39,8 +47,6 @@ export default class DashboardComponent implements OnInit {
   public currentPage = signal<number>(0);
 
   private currentSearchTerm = signal<string>("");
-
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.loadHeroes(1);
@@ -106,18 +112,34 @@ export default class DashboardComponent implements OnInit {
   }
 
   onEdit(id: number): void {
-    console.log(id);
+    this.router.navigate(["/edit-hero", id]);
   }
 
   onDelete(id: number): void {
-    if (confirm("¿Estás seguro de que deseas eliminar este superhéroe?")) {
-      this.heroesService.deleteHero(id).subscribe({
-        next: () => {
-          this.loadHeroes(this.currentPage() + 1);
-        },
-        error: (err) => console.error("Error al eliminar el héroe", err),
+    this.confirmationService
+      .confirm("¿Eliminar héroe?")
+      .subscribe((confirmed) => {
+        if (confirmed) {
+          this.heroesService.deleteHero(id).subscribe({
+            next: () => {
+              this.snackbarService.showSuccess("Héroe eliminado con éxito");
+              // Recargar la lista de héroes
+              if (this.currentSearchTerm().length === 0) {
+                this.loadHeroes(this.currentPage() + 1);
+              } else {
+                this.searchHeroes(
+                  this.currentSearchTerm(),
+                  this.currentPage() + 1
+                );
+              }
+            },
+            error: (err) => {
+              this.snackbarService.showError("Error al eliminar el héroe");
+              console.error("Error al eliminar el héroe", err);
+            },
+          });
+        }
       });
-    }
   }
 
   onAdd(): void {

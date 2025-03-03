@@ -14,7 +14,7 @@ import { MatIconModule } from "@angular/material/icon";
         <mat-icon color="accent">star_border</mat-icon>
         }
       </div>
-      <span class="rating-value">{{ rating() }}/10</span>
+      <span class="rating-value">{{ rating() || 0 }}/10</span>
     </div>
   `,
   styles: `
@@ -47,8 +47,6 @@ import { MatIconModule } from "@angular/material/icon";
   `,
 })
 export default class RaitingComponent implements OnInit {
-  rating = input<number | undefined>(0);
-  ngOnInit(): void {
-    console.log(this.rating());
-  }
+  rating = input<number | undefined>();
+  ngOnInit(): void {}
 }

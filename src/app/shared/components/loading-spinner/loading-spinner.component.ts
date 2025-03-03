@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { LoadingService } from "../../../core/services/loading.service";
 import { MatProgressSpinner } from "@angular/material/progress-spinner";
@@ -8,12 +8,14 @@ import { MatProgressSpinner } from "@angular/material/progress-spinner";
   standalone: true,
   imports: [CommonModule, MatProgressSpinner],
   template: `
-    <div class="loading-overlay" *ngIf="loadingService.loading$ | async">
+    @if(loadingService.loading$ | async) {
+    <div class="loading-overlay">
       <div class="spinner-container">
         <mat-spinner></mat-spinner>
         <p class="loading-text">Loading...</p>
       </div>
     </div>
+    }
   `,
   styles: [
     `
@@ -49,5 +51,5 @@ import { MatProgressSpinner } from "@angular/material/progress-spinner";
   ],
 })
 export class LoadingSpinnerComponent {
-  constructor(public loadingService: LoadingService) {}
+  loadingService = inject(LoadingService);
 }
