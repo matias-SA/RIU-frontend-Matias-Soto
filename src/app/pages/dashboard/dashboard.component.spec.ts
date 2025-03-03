@@ -78,7 +78,7 @@ describe("DashboardComponent", () => {
     heroesServiceSpy.getHeroes.and.returnValue(of(mockPaginatedResponse));
     heroesServiceSpy.searchHeroes.and.returnValue(of(mockPaginatedResponse));
     heroesServiceSpy.deleteHero.and.returnValue(of(null));
-    confirmationServiceSpy.confirm.and.returnValue(of(true)); // Por defecto, confirmar
+    confirmationServiceSpy.confirm.and.returnValue(of(true));
 
     await TestBed.configureTestingModule({
       imports: [

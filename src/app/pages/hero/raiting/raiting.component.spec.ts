@@ -89,7 +89,6 @@ describe("RaitingComponent", () => {
     fixture.detectChanges();
     await fixture.whenStable();
 
-    // Verificar el estado interno del componente
     expect(raitingComponent.rating()).toBe(0);
 
     const filledStars = fixture.debugElement

@@ -123,7 +123,6 @@ export default class DashboardComponent implements OnInit {
           this.heroesService.deleteHero(id).subscribe({
             next: () => {
               this.snackbarService.showSuccess("Héroe eliminado con éxito");
-              // Recargar la lista de héroes
               if (this.currentSearchTerm().length === 0) {
                 this.loadHeroes(this.currentPage() + 1);
               } else {

@@ -110,7 +110,6 @@ describe("HeroComponent", () => {
     const teamElement = fixture.debugElement.query(By.css(".hero-team-badge"));
     expect(teamElement.nativeElement.classList.contains("marvel")).toBeTrue();
 
-    // Cambiar el equipo a DC
     component.hero.set({ ...mockHero, team: "DC" });
     fixture.detectChanges();
     expect(teamElement.nativeElement.classList.contains("dc")).toBeTrue();
@@ -163,7 +162,6 @@ describe("HeroComponent", () => {
       teamValueElement.nativeElement.classList.contains("marvel-text")
     ).toBeTrue();
 
-    // Cambiar el equipo a DC
     component.hero.set({ ...mockHero, team: "DC" });
     fixture.detectChanges();
     expect(

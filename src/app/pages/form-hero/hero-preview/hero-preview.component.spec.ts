@@ -99,19 +99,16 @@ describe("HeroPreviewComponent", () => {
   });
 
   it("debería aplicar la clase CSS correcta según el equipo", () => {
-    // Probar equipo Marvel
     component.hero = { ...mockHero, team: "Marvel" };
     fixture.detectChanges();
     let teamElement = fixture.debugElement.query(By.css(".preview-team"));
     expect(teamElement.nativeElement.classList.contains("marvel")).toBeTrue();
 
-    // Probar equipo DC
     component.hero = { ...mockHero, team: "DC" };
     fixture.detectChanges();
     teamElement = fixture.debugElement.query(By.css(".preview-team"));
     expect(teamElement.nativeElement.classList.contains("dc")).toBeTrue();
 
-    // Probar equipo desconocido
     component.hero = { ...mockHero, team: "Otro" };
     fixture.detectChanges();
     teamElement = fixture.debugElement.query(By.css(".preview-team"));
