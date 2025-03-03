@@ -1,27 +1,98 @@
 # RIUFrontendMatiasSoto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.14.
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) versión 18.2.14.
 
-## Development server
+## Requisitos Previos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js (versión 20 o superior)
+- Angular CLI
+- Docker y Docker Compose (opcional, para ejecutar con Docker)
 
-## Code scaffolding
+## Instalación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clonar el repositorio:
+```bash
+git clone [URL_DEL_REPOSITORIO]
+cd RIU-frontend-Matias-Soto
+```
 
-## Build
+2. Instalar dependencias:
+```bash
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Ejecutar el Proyecto
 
-## Running unit tests
+### Opción 1: Desarrollo Local
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Iniciar el servidor de desarrollo:
+```bash
+ng serve
+```
 
-## Running end-to-end tests
+2. Navegar a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambias alguno de los archivos fuente.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Opción 2: Usando Docker
 
-## Further help
+1. Construir la imagen Docker:
+```bash
+docker compose build
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+2. Iniciar la aplicación:
+```bash
+docker compose up -d
+```
+
+3. Navegar a `http://localhost` para ver la aplicación.
+
+4. Para detener la aplicación:
+```bash
+docker compose down
+```
+
+## Comandos Útiles
+
+### Desarrollo Local
+- `ng serve`: Iniciar servidor de desarrollo
+- `ng build`: Construir el proyecto
+- `ng test`: Ejecutar pruebas unitarias
+- `ng e2e`: Ejecutar pruebas end-to-end
+
+### Docker
+- `docker compose ps`: Ver estado de los contenedores
+- `docker compose logs -f`: Ver logs en tiempo real
+- `docker compose restart`: Reiniciar la aplicación
+- `docker stats`: Monitorear uso de recursos
+
+## Estructura del Proyecto
+
+```
+src/
+├── app/
+│   ├── core/           # Servicios, interceptores, guards
+│   ├── pages/          # Componentes de páginas
+│   └── shared/         # Componentes, directivas y pipes compartidos
+├── assets/            # Recursos estáticos
+└── environments/      # Configuraciones de entorno
+```
+
+## Tecnologías Utilizadas
+
+- Angular 18
+- Angular Material
+- RxJS
+- Docker
+- Nginx
+
+## Scripts Disponibles
+
+- `npm start`: Inicia el servidor de desarrollo
+- `npm run build`: Construye el proyecto para producción
+- `npm test`: Ejecuta las pruebas unitarias
+- `npm run lint`: Ejecuta el linter
+- `npm run format`: Formatea el código
+
+## Ayuda Adicional
+
+Para obtener más ayuda sobre Angular CLI usa `ng help` o visita la [página de documentación de Angular CLI](https://angular.dev/tools/cli).
