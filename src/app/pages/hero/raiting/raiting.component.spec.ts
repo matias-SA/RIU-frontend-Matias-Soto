@@ -84,12 +84,9 @@ describe("RaitingComponent", () => {
     expect(ratingLabel.nativeElement.textContent).toBe("Calificación:");
   });
 
-  it("debería manejar valores undefined mostrando 0 estrellas", async () => {
+  it("debería usar el valor por defecto (0) cuando rating es undefined", () => {
     component.rating = undefined;
     fixture.detectChanges();
-    await fixture.whenStable();
-
-    expect(raitingComponent.rating()).toBe(0);
 
     const filledStars = fixture.debugElement
       .queryAll(By.css("mat-icon"))

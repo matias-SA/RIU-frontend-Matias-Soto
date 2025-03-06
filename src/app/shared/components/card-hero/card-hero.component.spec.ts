@@ -45,16 +45,13 @@ describe("CardHeroComponent", () => {
     expect(subtitle.nativeElement.textContent).toContain(mockHero.team);
   });
 
-  it("debería tener tres botones con sus respectivos iconos", () => {
+  it("debería tener tres botones con sus respectivos labels: editar, eliminar y ver", () => {
     const buttons = fixture.debugElement.queryAll(By.css("button"));
-    const icons = fixture.debugElement.queryAll(By.css("mat-icon"));
 
     expect(buttons.length).toBe(3);
-    expect(icons.length).toBe(3);
-
-    expect(icons[0].nativeElement.textContent).toContain("edit");
-    expect(icons[1].nativeElement.textContent).toContain("delete");
-    expect(icons[2].nativeElement.textContent).toContain("visibility");
+    expect(buttons[0].nativeElement.textContent.trim()).toBe("Editar");
+    expect(buttons[1].nativeElement.textContent.trim()).toBe("Eliminar");
+    expect(buttons[2].nativeElement.textContent.trim()).toBe("Ver");
   });
 
   it("debería emitir el id del héroe al hacer click en editar", () => {

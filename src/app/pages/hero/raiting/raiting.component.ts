@@ -47,6 +47,6 @@ import { MatIconModule } from "@angular/material/icon";
   `,
 })
 export default class RaitingComponent implements OnInit {
-  rating = input<number | undefined>();
+  rating = input<number | undefined>(0);
   ngOnInit(): void {}
 }
